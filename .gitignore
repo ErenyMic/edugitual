@@ -1,0 +1,96 @@
+# =====================================================
+# Global ignores (betrifft gesamtes Repo)
+# =====================================================
+
+# Dependency folders (for all subprojects)
+node_modules/
+
+# Build / dist output (for all subprojects)
+dist/
+build/
+
+# Environment files
+.env
+.env.*.local
+
+# Temporary data
+tmp/
+temp/
+.temp/
+.tmp/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS
+.DS_Store
+
+# IDEs and editors (all)
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Tests
+coverage
+.nyc_output
+
+# Typescript build cache
+*.tsbuildinfo
+
+# =====================================================
+# Forgejo
+# =====================================================
+
+/forgejo/data
+
+# =====================================================
+# android
+# =====================================================
+
+/android/gradle-cache
+/android/gradle-wrapper
+/android/output
+
+# =====================================================
+# Backend (NestJS)
+# =====================================================
+
+/backend/prisma/dev.db
+
+# =====================================================
+# Frontend (Ionic)
+# =====================================================
+
+/frontend/platforms
+/frontend/plugins
+/frontend/www
+/frontend/android
+
+/frontend/.ionic
+/frontend/.sass-cache
+/frontend/.sourcemaps
+/frontend/.versions

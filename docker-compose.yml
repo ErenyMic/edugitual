@@ -1,0 +1,29 @@
+services:
+  forgejo:
+    build:
+      context: ./forgejo
+      dockerfile: Dockerfile
+    container_name: forgejo
+    ports:
+      - "3001:3000"
+      - "2222:22"
+    volumes:
+      - ./forgejo/data:/data
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: unless-stopped
+  android:
+    build: 
+      context: .
+      dockerfile: ./android/Dockerfile
+    volumes:
+      - ./frontend/node_modules:/app/node_modules
+      - ./frontend/android:/app/src
+      - ./android/output:/app/build
+      - ./android/gradle-cache:/home/dev/.gradle
+      - ./android/gradle-wrapper:/app/src/.gradle
+    user: "1000:1000"
+    tty: true
+    stdin_open: true
+    privileged: true 
