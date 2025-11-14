@@ -4,7 +4,7 @@ set -euo pipefail
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 CMDLINE_TOOLS="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin"
 EMULATOR="$ANDROID_SDK_ROOT/emulator/emulator"
-AVD_NAME="test_device"
+AVD_NAME="Medium_Phone_API_36.1"
 export SYSTEM_IMAGE="system-images;android-36.1;google_apis_playstore;x86_64"
 IMAGE_DIR="$ANDROID_SDK_ROOT/system-images/android-34/google_apis/x86_64"
 APK_PATH="./output/debug/app-debug.apk"
